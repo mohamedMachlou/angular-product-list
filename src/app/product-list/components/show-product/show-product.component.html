@@ -1,0 +1,21 @@
+<div class="show-product">
+  <h2>Desserts</h2>
+
+  <div class="product" *ngFor="let product of products()">
+    <div class="img">
+      <img src="./assets/images/image-baklava-desktop.jpg" alt="Machlou" />
+      <div class="add-to-cart">
+        <img src="./assets/icon-add-to-cart.svg" alt="" />
+        Add To Cart
+      </div>
+      <div class="counter">
+        <button class="moins">-</button>
+        <h5>1</h5>
+        <button class="plus">+</button>
+      </div>
+    </div>
+    <h4></h4>
+    <h3>product title</h3>
+    <h2>$19.49</h2>
+  </div>
+</div>
