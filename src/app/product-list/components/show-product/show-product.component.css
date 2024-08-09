@@ -25,6 +25,12 @@
   width: 100%;
   border-radius: 12px;
 }
+.product-active {
+  border: 2px solid var(--red-color);
+}
+.product-deactive {
+  border: none;
+}
 .show-product .product .img .add-to-cart {
   width: 55%;
   height: 40px;

@@ -79,4 +79,13 @@ export class ProductsDataService {
       img: './assets/images/image-panna-cotta-desktop.jpg',
     },
   ];
+
+  /// Mark Selected Products
+  toSelectProduct(product: any) {
+    this.allProducts.map((prod) => {
+      if (prod.name == product.name) {
+        prod.selected = true;
+      }
+    });
+  }
 }
