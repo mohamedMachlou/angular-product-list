@@ -13,7 +13,11 @@
         <h5>{{ product.counter.toFixed(2) }} x</h5>
         <h5>${{ product.price.toFixed(2) }}</h5>
         <h5>${{ product.totalPrice.toFixed(2) }}</h5>
-        <img src="./assets/icon-remove-item.svg" alt="" />
+        <img
+          (click)="deleteProduct(product)"
+          src="./assets/icon-remove-item.svg"
+          alt=""
+        />
       </div>
     </div>
     }

@@ -119,6 +119,24 @@ export class ProductsDataService {
     this.cartStatus.next(myStatus);
   }
 
+  /////////////////////////////////////////////////
+  /////////////////////////////////////////////////
+  private newCartData = new BehaviorSubject<any>(null);
+  currentnewCartData = this.newCartData.asObservable();
+
+  deleteProduct(product: Product) {
+    this.newCartData.next(
+      this.cartData().filter((prd) => prd.name != product.name)
+    );
+    console.log('Service :');
+    this.currentnewCartData.subscribe((res) => {
+      console.log(res);
+      this.cartData.set(res);
+    });
+    this.getProducts(this.cartData());
+    this.checkCartStatus();
+  }
+
   ////////////////////////////////////////////////////////////
   //////////  Selecting Products : True  /////////////////////
   ////////////////////////////////////////////////////////////
@@ -142,7 +160,6 @@ export class ProductsDataService {
     this.cartData().map(
       (product) => (product.totalPrice = product.price * product.counter)
     );
-    console.log(this.cartData());
     this.getProducts(this.cartData());
 
     ////// Calcul Total Price
@@ -151,6 +168,10 @@ export class ProductsDataService {
     }, 0);
     this.gettotalPrice(myTotal);
     //// Check Cart Products is Empty or Not to Get Cart Status
+    this.checkCartStatus();
+  }
+  //// Check Cart Products is Empty or Not to Get Cart Status
+  checkCartStatus() {
     this.cartData().length == 0
       ? this.getCartStatus(false)
       : this.getCartStatus(true);
