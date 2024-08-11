@@ -125,22 +125,31 @@ export class ProductsDataService {
   currentnewCartData = this.newCartData.asObservable();
 
   deleteProduct(product: Product) {
+    ///////
     this.allProducts().map((prd) => {
       if (prd.name == product.name) {
         prd.selected = false;
       }
-      console.log(this.allProducts());
     });
+    //////////
     this.newCartData.next(
       this.cartData().filter((prd) => prd.name != product.name)
     );
+    ///////////////
     console.log('Service :');
     this.currentnewCartData.subscribe((res) => {
       console.log(res);
       this.cartData.set(res);
     });
 
+    ////// Calcul Total Price
+    let myTotal = this.cartData().reduce((total, product) => {
+      return (total += product.totalPrice);
+    }, 0);
+    this.gettotalPrice(myTotal);
+    //////
     this.getProducts(this.cartData());
+    /////
     this.checkCartStatus();
   }
 
