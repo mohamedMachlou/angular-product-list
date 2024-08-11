@@ -1,0 +1,96 @@
+/* //////////////////////////////////////////////////////////////////// */
+/* /////////// Product List & Cart : Machlou Mohamed ////////////////// */
+/* //////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////// */
+.cart .header {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  font-weight: 600;
+  font-size: 1.7rem;
+  color: var(--red-color);
+}
+.cart .empty-cart {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cart .cart-products .product {
+  width: 100%;
+}
+.cart .product {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: flex-start;
+  padding: 7px 30px;
+  position: relative;
+  border-bottom: 1px solid var(--rose400-color);
+}
+.cart .product .title {
+  width: 100%;
+  display: block;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.cart .product .prod-price {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+}
+.cart .product .prod-price h5 {
+  margin: 10px;
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+.cart .product .prod-price h5:first-child {
+  color: var(--red-color);
+  font-weight: 600;
+  font-size: 1rem;
+}
+.cart .product img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid var(--rose400-color);
+  position: absolute;
+  right: 25px;
+  top: 30px;
+}
+.cart .price {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cart .price .order-total {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart .price .order-total h5 {
+  font-weight: 500;
+  font-size: 1rem;
+  margin: 15px 0px;
+}
+.cart .price .order-total h5:last-child {
+  color: var(--red-color);
+  font-weight: 700;
+}
+.cart .price button {
+  width: 80%;
+  height: 35px;
+  margin: 0px auto 25px;
+  background-color: var(--red-color);
+  color: var(--rose50-color);
+  border: none;
+  border-radius: 7px;
+  font-weight: 600;
+  font-size: 1rem;
+}

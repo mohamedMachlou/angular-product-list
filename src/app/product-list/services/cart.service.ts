@@ -1,9 +1,19 @@
-import { Injectable } from '@angular/core';
+import { ProductsDataService } from './products-data.service';
+import { inject, Injectable, signal } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CartService {
+  //// Injection Services
+  productsDataService = inject(ProductsDataService);
 
-  constructor() { }
+  /// Filter Data to show on Cart
+  // selectCartProducts() {
+  //   this.productsSelected.set(
+  //     this.productsDataService.allProducts.filter((product) => {
+  //       return product.selected == true;
+  //     })
+  //   );
+  // }
 }

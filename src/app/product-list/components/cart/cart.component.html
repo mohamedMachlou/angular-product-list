@@ -1,1 +1,28 @@
-<div class="cart"></div>
+<div class="cart">
+  <div class="header">Your Cart (0)</div>
+  <div *ngIf="!this.cartStatus()" class="empty-cart">
+    <img src="./assets/illustration-empty-cart.svg" alt="Empty Cart" />
+    <p>Your added items will appear here</p>
+  </div>
+  <div *ngIf="this.cartStatus()" class="cart-products">
+    @for(product of this.cartProducts(); track product.title + product.counter
+    +product.price ){
+    <div class="product">
+      <div class="title">{{ product.title }}</div>
+      <div class="prod-price">
+        <h5>{{ product.counter.toFixed(2) }} x</h5>
+        <h5>${{ product.price.toFixed(2) }}</h5>
+        <h5>${{ product.totalPrice.toFixed(2) }}</h5>
+        <img src="./assets/icon-remove-item.svg" alt="" />
+      </div>
+    </div>
+    }
+  </div>
+  <div *ngIf="this.cartStatus()" class="price">
+    <div class="order-total">
+      <h5>Order Total :</h5>
+      <h5>${{ this.orderTotal() }}</h5>
+    </div>
+    <button>Confirm Order</button>
+  </div>
+</div>

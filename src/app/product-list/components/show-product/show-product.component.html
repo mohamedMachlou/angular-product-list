@@ -1,7 +1,7 @@
 <div class="show-product">
   <h2>Desserts</h2>
-  @for (product of products; track product.name + product.title +
-  product.price){
+  @for (product of products(); track product.name + product.title +
+  product.price + product.counter){
   <div class="product">
     <div class="img">
       <img
@@ -18,9 +18,9 @@
         Add To Cart
       </div>
       <div *ngIf="product.selected" class="counter">
-        <button class="moins">-</button>
-        <h5>1</h5>
-        <button class="plus">+</button>
+        <button (click)="decrementNbProd(product)" class="moins">-</button>
+        <h5>{{ product.counter }}</h5>
+        <button (click)="incrementNbProd(product)" class="plus">+</button>
       </div>
     </div>
     <h4>{{ product.name }}</h4>

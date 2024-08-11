@@ -6,15 +6,14 @@ import { AppComponent } from './app.component';
 import { ProductListModule } from './product-list/product-list.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
+  declarations: [AppComponent],
+  imports: [BrowserModule, AppRoutingModule, ProductListModule],
+  providers: [
+    {
+      provide: 'experimentalFeatures',
+      useValue: { zonelessChangeDetection: true },
+    },
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ProductListModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

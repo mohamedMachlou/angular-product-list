@@ -8,5 +8,11 @@ import { ConfirmPopUpComponent } from './components/confirm-pop-up/confirm-pop-u
   declarations: [ShowProductComponent, CartComponent, ConfirmPopUpComponent],
   imports: [CommonModule],
   exports: [ShowProductComponent, CartComponent],
+  providers: [
+    {
+      provide: 'experimentalFeatures',
+      useValue: { zonelessChangeDetection: true },
+    },
+  ],
 })
 export class ProductListModule {}
