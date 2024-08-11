@@ -81,6 +81,8 @@
 }
 .show-product .product .img .counter h5 {
   color: var(--rose50-color);
+  font-weight: 500;
+  font-size: 1rem;
 }
 .show-product .product .img .counter button:hover {
   background-color: var(--rose50-color);
@@ -108,4 +110,24 @@
   color: var(--red-color);
   font-weight: 600;
   font-size: 1.2rem;
+}
+
+/* Small devices (Portrait phones, 576px and up) */
+@media (min-width: 375px) {
+  .show-product .product .img .add-to-cart {
+    width: 60%;
+    height: 35px;
+    padding: 6px;
+  }
+  .show-product .product .img .add-to-cart img {
+    width: 30px;
+  }
+  .show-product .product .img .counter {
+    width: 60%;
+    height: 35px;
+    padding: 6px;
+  }
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
 }

@@ -38,11 +38,14 @@ body {
   user-select: none;
 }
 /* Start Media Queries */
-/* Small devices (Portrait phones, 576px and up) */
+/* Small devices (Portrait phones, 375px and up) */
 @media (min-width: 375px) {
   .container {
-    width: 375px;
-    background-color: rgb(97, 245, 11);
+    width: 98%;
+    margin: auto;
+    /* background-color: rgb(97, 245, 11); */
+    background-color: var(--rose100);
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -62,17 +65,15 @@ body {
     height: 280px;
   }
   .cart {
+    width: 370px;
     background-color: var(--rose50-color);
-    width: 100%;
-    /* height: 50vh; */
-    margin-right: 20px;
   }
 }
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   .container {
-    width: 576px;
-    background-color: rgb(245, 128, 11);
+    width: 98%;
+    /* background-color: rgb(245, 128, 11); */
   }
   .show-product {
     width: 90%;
@@ -84,19 +85,22 @@ body {
   .show-product .product .img {
     height: 320px;
   }
+  .cart {
+    width: 480px;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .container {
-    width: 768px;
-    /* height: 100vh; */
-    background-color: rgb(59, 157, 226);
+    width: 98%;
     display: grid;
     grid-template-columns: 50% 50%;
+    align-items: flex-start;
+    justify-content: space-between;
   }
   .show-product {
-    width: 100%;
+    width: 96%;
   }
   .show-product .product {
     width: 90%;
@@ -104,13 +108,19 @@ body {
   .show-product .product .img {
     height: 260px;
   }
+  .cart {
+    width: 80%;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   .container {
     width: 992px;
-    background-color: #3ccfca;
+    /* background-color: #3ccfca; */
+    align-items: start;
+    justify-content: start;
+
     grid-template-columns: 60% 40%;
   }
   .show-product {
@@ -120,6 +130,11 @@ body {
   .show-product .product {
     width: 45%;
   }
+  /* .cart {
+    background-color: var(--rose50-color);
+    width: 90%;
+    margin-right: 20px;
+  } */
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
@@ -138,12 +153,11 @@ body {
   .show-product .product {
     width: 32%;
   }
-  .cart {
+  /* .cart {
     background-color: var(--rose50-color);
     width: 100%;
-    /* height: 50vh; */
     margin-right: 20px;
-  }
+  } */
 }
 /* End Media Queries */
 /* End  Global Rules */

@@ -136,9 +136,7 @@ export class ProductsDataService {
       this.cartData().filter((prd) => prd.name != product.name)
     );
     ///////////////
-    console.log('Service :');
     this.currentnewCartData.subscribe((res) => {
-      console.log(res);
       this.cartData.set(res);
     });
 
