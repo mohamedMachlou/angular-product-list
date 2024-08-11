@@ -76,14 +76,14 @@ body {
     /* background-color: rgb(245, 128, 11); */
   }
   .show-product {
-    width: 90%;
+    width: 85%;
     gap: 17px;
   }
   .show-product .product {
     width: 70%;
   }
   .show-product .product .img {
-    height: 320px;
+    height: 290px;
   }
   .cart {
     width: 480px;
@@ -109,7 +109,7 @@ body {
     height: 260px;
   }
   .cart {
-    width: 80%;
+    width: 90%;
   }
 }
 
