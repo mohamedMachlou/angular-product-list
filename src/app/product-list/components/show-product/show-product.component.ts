@@ -28,8 +28,7 @@ export class ShowProductComponent implements OnInit {
 
   // Add To Cart
   addToCart(product: any) {
-    this.productsDataService.toSelectProduct(product);
-    product.counter = 1;
+    this.productsDataService.addToCart(product);
     this.selectCartProd();
   }
 

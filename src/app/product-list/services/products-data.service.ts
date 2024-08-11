@@ -125,6 +125,12 @@ export class ProductsDataService {
   currentnewCartData = this.newCartData.asObservable();
 
   deleteProduct(product: Product) {
+    this.allProducts().map((prd) => {
+      if (prd.name == product.name) {
+        prd.selected = false;
+      }
+      console.log(this.allProducts());
+    });
     this.newCartData.next(
       this.cartData().filter((prd) => prd.name != product.name)
     );
@@ -133,6 +139,7 @@ export class ProductsDataService {
       console.log(res);
       this.cartData.set(res);
     });
+
     this.getProducts(this.cartData());
     this.checkCartStatus();
   }
@@ -140,9 +147,10 @@ export class ProductsDataService {
   ////////////////////////////////////////////////////////////
   //////////  Selecting Products : True  /////////////////////
   ////////////////////////////////////////////////////////////
-  toSelectProduct(product: Product) {
+  addToCart(product: Product) {
     this.allProducts().map((prod) => {
       if (prod.name == product.name) {
+        prod.counter = 1;
         prod.selected = true;
       }
     });
