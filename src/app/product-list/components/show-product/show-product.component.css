@@ -291,4 +291,11 @@
     left: 20%;
   }
 }
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .popup {
+    width: 50%;
+    left: 25%;
+  }
+}
 /* End Media Queries */
