@@ -277,4 +277,11 @@
     left: 2.5%;
   }
 }
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .popup {
+    width: 90%;
+    left: 5%;
+  }
+}
 /* End Media Queries */
