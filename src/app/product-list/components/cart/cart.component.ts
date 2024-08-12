@@ -24,7 +24,9 @@ export class CartComponent implements OnInit {
     ////////////////////////////////////////////////////////////////
     this.productsDataService.currentProduct.subscribe((products) => {
       this.cartProducts.set(products);
-      this.cartNumber.set(this.cartProducts()?.length);
+      if (this.cartProducts()?.length > 0) {
+        this.cartNumber.set(this.cartProducts()?.length);
+      }
     });
 
     ////////////////////////////////////////////////////////////
