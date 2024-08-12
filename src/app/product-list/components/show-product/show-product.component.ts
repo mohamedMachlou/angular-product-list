@@ -11,6 +11,7 @@ export class ShowProductComponent implements OnInit {
   // products: any[] = [];
   products = signal<any[]>([]);
   selected = signal<boolean>(false);
+  popUpStatus = signal<boolean>(false);
 
   /// Injection Services
   productsDataService = inject(ProductsDataService);
@@ -18,6 +19,7 @@ export class ShowProductComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAllProducts();
+    this.getPopupStatus();
   }
 
   /// Get All Products To Show
@@ -45,5 +47,19 @@ export class ShowProductComponent implements OnInit {
   //// Selected Cart's Products
   selectCartProd() {
     this.productsDataService.selectCartProducts();
+  }
+  //////////////////////////////////////////////////////////////
+  /////////  Get pop-Up Status Active : True/ False  ///////////
+  //////////////////////////////////////////////////////////////
+  getPopupStatus() {
+    this.productsDataService.currentpopupStatus.subscribe((status) => {
+      this.popUpStatus.set(status);
+    });
+  }
+  ////////////////////////////////////////////////////////////////
+  /// Start New Order Btn to Deactive Pop-up      ////////////////
+  ////////////////////////////////////////////////////////////////
+  deactivePopUp() {
+    this.productsDataService.getPopupStatus(false);
   }
 }

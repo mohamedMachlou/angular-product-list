@@ -6,6 +6,7 @@
 :root {
   /* - Red: hsl(14, 86%, 42%) */
   --red-color: hsl(14, 86%, 42%);
+  --red-color-hover: hsl(14, 74%, 55%);
   /* - Green: hsl(159, 69%, 38%) */
   --green-color: hsl(159, 69%, 38%);
 

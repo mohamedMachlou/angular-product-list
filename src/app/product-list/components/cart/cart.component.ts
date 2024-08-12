@@ -47,4 +47,11 @@ export class CartComponent implements OnInit {
   deleteProduct(product: Product) {
     this.productsDataService.deleteProduct(product);
   }
+
+  ////////////////////////////////////////////////////////////////
+  /////// Corfirm Btn to Active Pop-up      //////////////////////
+  ////////////////////////////////////////////////////////////////
+  activePopUp() {
+    this.productsDataService.getPopupStatus(true);
+  }
 }

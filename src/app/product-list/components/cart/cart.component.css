@@ -93,4 +93,14 @@
   border-radius: 7px;
   font-weight: 600;
   font-size: 1rem;
+  cursor: pointer;
+}
+.cart .price button:hover {
+  background-color: var(--red-color-hover);
+  color: var(--rose50-color);
+}
+.cart .price button:active {
+  background-color: var(--rose50-color);
+  color: var(--red-color);
+  border: 1px solid var(--red-color);
 }

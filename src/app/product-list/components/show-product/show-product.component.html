@@ -29,8 +29,8 @@
   </div>
   }
 </div>
-<div class="popup-back"></div>
-<div class="popup">
+<div *ngIf="this.popUpStatus()" class="popup-back"></div>
+<div *ngIf="this.popUpStatus()" class="popup">
   <div class="header">
     <img src="./assets/icon-checked.svg" alt="" />
     <h2>Order Confirmed</h2>
@@ -69,6 +69,6 @@
     <h3>$1999.79</h3>
   </div>
   <div class="btn">
-    <button>Start New Order</button>
+    <button (click)="deactivePopUp()">Start New Order</button>
   </div>
 </div>

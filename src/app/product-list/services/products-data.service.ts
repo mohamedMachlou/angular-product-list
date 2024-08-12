@@ -125,6 +125,28 @@ export class ProductsDataService {
   private newCartData = new BehaviorSubject<any>(null);
   currentnewCartData = this.newCartData.asObservable();
 
+  /////////////////////////////////////////////////
+  /////////////////////////////////////////////////
+  private popupStatus = new BehaviorSubject<boolean>(false);
+  currentpopupStatus = this.popupStatus.asObservable();
+
+  getPopupStatus(myStatus: boolean) {
+    {
+      this.popupStatus.next(myStatus);
+      if (!myStatus) {
+        console.log('salam : ', myStatus);
+        this.allProducts().map((prd) => {
+          prd.selected = false;
+          prd.counter = 0;
+          prd.totalPrice = 0;
+          console.log(this.allProducts());
+        });
+        this.selectCartProducts();
+      }
+    }
+  }
+  /////////////////////////////////////////////////
+  /////////////////////////////////////////////////
   deleteProduct(product: Product) {
     ///////
     this.allProducts().map((prd) => {
