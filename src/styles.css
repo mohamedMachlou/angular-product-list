@@ -154,11 +154,6 @@ body {
   .show-product .product {
     width: 32%;
   }
-  /* .cart {
-    background-color: var(--rose50-color);
-    width: 100%;
-    margin-right: 20px;
-  } */
 }
 /* End Media Queries */
 /* End  Global Rules */

@@ -1,5 +1,4 @@
 import { Product } from '../../models/product';
-import { CartService } from './../../services/cart.service';
 import { ProductsDataService } from './../../services/products-data.service';
 import { Component, inject, OnInit, signal } from '@angular/core';
 
@@ -18,7 +17,6 @@ export class ShowProductComponent implements OnInit {
 
   /// Injection Services
   productsDataService = inject(ProductsDataService);
-  cartService = inject(CartService);
 
   ngOnInit(): void {
     this.getAllProducts();

@@ -240,6 +240,5 @@ export class ProductsDataService {
       }
     });
     this.selectCartProducts();
-    // console.log(this.cartData());
   }
 }
