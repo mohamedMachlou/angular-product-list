@@ -37,36 +37,27 @@
     <p>We hope you enjoy you food!</p>
   </div>
   <div class="products">
+    @for(product of this.cartData(); track product.img + product.title +
+    product.price + product.counter + product.totalPrice){
+
     <div class="product">
       <div class="img">
-        <img src="./assets/image-baklava-desktop.jpg" alt="" />
+        <img src="{{ product.img }}" alt="" />
       </div>
       <div class="details">
-        <div class="title">my product title here</div>
+        <div class="title">{{ product.title }}</div>
         <div class="number-price">
-          <h3>5x</h3>
-          <h3>$53.87</h3>
+          <h3>{{ product.counter }}x</h3>
+          <h3>${{ product.price.toFixed(2) }}</h3>
         </div>
       </div>
-      <div class="prdPriceTotal">$654.65</div>
+      <div class="prdPriceTotal">${{ product.totalPrice.toFixed(2) }}</div>
     </div>
-    <div class="product">
-      <div class="img">
-        <img src="" alt="" />
-      </div>
-      <div class="details">
-        <div class="title"></div>
-        <div class="number-price">
-          <h3>5x</h3>
-          <h3>$53.87</h3>
-        </div>
-      </div>
-      <div class="prdPriceTotal">$654.65</div>
-    </div>
+    }
   </div>
   <div class="order-total">
     <h3>Order Total :</h3>
-    <h3>$1999.79</h3>
+    <h3>${{ this.orderTotal() }}</h3>
   </div>
   <div class="btn">
     <button (click)="deactivePopUp()">Start New Order</button>

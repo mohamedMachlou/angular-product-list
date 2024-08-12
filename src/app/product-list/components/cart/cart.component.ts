@@ -26,6 +26,8 @@ export class CartComponent implements OnInit {
       this.cartProducts.set(products);
       if (this.cartProducts()?.length > 0) {
         this.cartNumber.set(this.cartProducts()?.length);
+      } else {
+        this.cartNumber.set(0);
       }
     });
 

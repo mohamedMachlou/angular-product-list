@@ -1,6 +1,6 @@
 import { Injectable, signal } from '@angular/core';
 import { Product } from '../models/product';
-import { BehaviorSubject, Observable, of } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -134,12 +134,10 @@ export class ProductsDataService {
     {
       this.popupStatus.next(myStatus);
       if (!myStatus) {
-        console.log('salam : ', myStatus);
         this.allProducts().map((prd) => {
           prd.selected = false;
           prd.counter = 0;
           prd.totalPrice = 0;
-          console.log(this.allProducts());
         });
         this.selectCartProducts();
       }

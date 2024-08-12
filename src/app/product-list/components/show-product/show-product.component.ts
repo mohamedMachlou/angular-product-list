@@ -1,3 +1,4 @@
+import { Product } from '../../models/product';
 import { CartService } from './../../services/cart.service';
 import { ProductsDataService } from './../../services/products-data.service';
 import { Component, inject, OnInit, signal } from '@angular/core';
@@ -9,9 +10,11 @@ import { Component, inject, OnInit, signal } from '@angular/core';
 })
 export class ShowProductComponent implements OnInit {
   // products: any[] = [];
-  products = signal<any[]>([]);
+  products = signal<Product[]>([]);
+  cartData = signal<Product[]>([]);
   selected = signal<boolean>(false);
   popUpStatus = signal<boolean>(false);
+  orderTotal = signal<number>(0);
 
   /// Injection Services
   productsDataService = inject(ProductsDataService);
@@ -20,6 +23,8 @@ export class ShowProductComponent implements OnInit {
   ngOnInit(): void {
     this.getAllProducts();
     this.getPopupStatus();
+    this.getCartData();
+    this.getTotalOrder();
   }
 
   /// Get All Products To Show
@@ -61,5 +66,24 @@ export class ShowProductComponent implements OnInit {
   ////////////////////////////////////////////////////////////////
   deactivePopUp() {
     this.productsDataService.getPopupStatus(false);
+  }
+
+  ////////////////////////////////////////////////////////////////
+  /// Get Cart Products From Products Data Service    ////////////
+  ////////////////////////////////////////////////////////////////
+  getCartData() {
+    this.productsDataService.currentProduct.subscribe((products) => {
+      {
+        this.cartData.set(products);
+      }
+    });
+  }
+  ////////////////////////////////////////////////////////////
+  ////// Get Products Order Total  ///////////////////////////
+  ////////////////////////////////////////////////////////////
+  getTotalOrder() {
+    this.productsDataService.currenttotalPrice.subscribe((totalPrices) => {
+      this.orderTotal.set(totalPrices?.toFixed(2));
+    });
   }
 }
