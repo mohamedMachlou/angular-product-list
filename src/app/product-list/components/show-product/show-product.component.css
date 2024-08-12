@@ -151,3 +151,24 @@
   left: 35%;
   padding: 25px;
 }
+.popup .header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.popup .header h2 {
+  width: 100%;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+.popup .header p {
+  width: 100%;
+  font-weight: 500;
+  font-size: 1rem;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  color: var(--rose400-color);
+}
