@@ -7,7 +7,7 @@ import { ConfirmPopUpComponent } from './components/confirm-pop-up/confirm-pop-u
 @NgModule({
   declarations: [ShowProductComponent, CartComponent, ConfirmPopUpComponent],
   imports: [CommonModule],
-  exports: [ShowProductComponent, CartComponent],
+  exports: [ShowProductComponent, CartComponent, ConfirmPopUpComponent],
   providers: [
     {
       provide: 'experimentalFeatures',

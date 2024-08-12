@@ -128,6 +128,26 @@
     padding: 6px;
   }
 }
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
+.popup-back {
+  content: "";
+  width: 100%;
+  height: 256.3vh;
+  z-index: 200;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  opacity: 60%;
+}
+.popup {
+  width: 40%;
+  /* height: 250px; */
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  background-color: white;
+  z-index: 201;
+  position: absolute;
+  top: 40px;
+  left: 35%;
+  padding: 25px;
 }
