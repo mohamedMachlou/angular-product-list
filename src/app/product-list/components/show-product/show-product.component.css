@@ -112,22 +112,6 @@
   font-size: 1.2rem;
 }
 
-/* Small devices (Portrait phones, 576px and up) */
-@media (min-width: 375px) {
-  .show-product .product .img .add-to-cart {
-    width: 60%;
-    height: 35px;
-    padding: 6px;
-  }
-  .show-product .product .img .add-to-cart img {
-    width: 30px;
-  }
-  .show-product .product .img .counter {
-    width: 60%;
-    height: 35px;
-    padding: 6px;
-  }
-}
 .popup-back {
   content: "";
   width: 100%;
@@ -280,8 +264,35 @@
   border: 1px solid var(--red-color);
 }
 /* Start Media Queries */
+/* Small devices (Portrait phones, 375px and down) */
+@media (max-width: 375px) {
+  .popup {
+    width: 96%;
+    left: 2%;
+  }
+  .show-product h2 {
+    font-size: 2rem;
+  }
+}
 /* Small devices (Portrait phones, 375px and up) */
 @media (min-width: 375px) {
+  .show-product h2 {
+    font-size: 2rem;
+    margin-left: 40px;
+  }
+  .show-product .product .img .add-to-cart {
+    width: 60%;
+    height: 35px;
+    padding: 6px;
+  }
+  .show-product .product .img .add-to-cart img {
+    width: 30px;
+  }
+  .show-product .product .img .counter {
+    width: 60%;
+    height: 35px;
+    padding: 6px;
+  }
   .popup {
     width: 95%;
     left: 2.5%;
@@ -289,6 +300,9 @@
 }
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
+  .show-product h2 {
+    margin-left: 60px;
+  }
   .popup {
     width: 90%;
     left: 5%;
@@ -296,8 +310,11 @@
 }
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  .show-product h2 {
+    margin-left: 20px;
+  }
   .popup {
-    width: 60%;
+    width: 40%;
     left: 20%;
   }
 }
