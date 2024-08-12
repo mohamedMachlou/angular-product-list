@@ -11,6 +11,7 @@ import { Product } from '../../models/product';
 export class CartComponent implements OnInit {
   cartProducts = signal<Product[]>([]);
   orderTotal = signal<number>(0);
+  cartNumber = signal<number>(0);
   cartStatus = signal<boolean>(false);
 
   //// Injection Services
@@ -21,9 +22,10 @@ export class CartComponent implements OnInit {
     ////////////////////////////////////////////////////////////////
     ////// Get Cart Products those have "Setected: True"  //////////
     ////////////////////////////////////////////////////////////////
-    this.productsDataService.currentProduct.subscribe((products) =>
-      this.cartProducts.set(products)
-    );
+    this.productsDataService.currentProduct.subscribe((products) => {
+      this.cartProducts.set(products);
+      this.cartNumber.set(this.cartProducts().length);
+    });
 
     ////////////////////////////////////////////////////////////
     ////// Get Products Order Total  ///////////////////////////
@@ -31,7 +33,6 @@ export class CartComponent implements OnInit {
     this.productsDataService.currenttotalPrice.subscribe((totalPrices) =>
       this.orderTotal.set(totalPrices?.toFixed(2))
     );
-
     ////////////////////////////////////////////////////////////
     //////     Get Cart Status       ///////////////////////////
     ////////////////////////////////////////////////////////////

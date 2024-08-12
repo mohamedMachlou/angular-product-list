@@ -102,6 +102,7 @@ export class ProductsDataService {
   getProducts(myProduct: Product[]) {
     this.productSource.next(myProduct);
   }
+
   /////////////////////////////////////////////////
   /////////////////////////////////////////////////
   private totalPriceSource = new BehaviorSubject<any>(null);
@@ -149,6 +150,7 @@ export class ProductsDataService {
     this.getProducts(this.cartData());
     /////
     this.checkCartStatus();
+    /////
   }
 
   ////////////////////////////////////////////////////////////

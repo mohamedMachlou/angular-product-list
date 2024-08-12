@@ -1,5 +1,5 @@
 <div class="cart">
-  <div class="header">Your Cart (0)</div>
+  <div class="header">Your Cart ({{ this.cartNumber() }})</div>
   <div *ngIf="!this.cartStatus()" class="empty-cart">
     <img src="./assets/illustration-empty-cart.svg" alt="Empty Cart" />
     <p>Your added items will appear here</p>
