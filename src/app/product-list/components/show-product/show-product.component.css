@@ -269,3 +269,12 @@
   border-radius: 8px;
   background-color: var(--red-color);
 }
+/* Start Media Queries */
+/* Small devices (Portrait phones, 375px and up) */
+@media (min-width: 375px) {
+  .popup {
+    width: 95%;
+    left: 2.5%;
+  }
+}
+/* End Media Queries */
