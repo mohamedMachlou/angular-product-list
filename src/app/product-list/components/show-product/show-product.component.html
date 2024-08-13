@@ -1,4 +1,4 @@
-<div class="show-product">
+<div class="show-product" #scroll>
   <h2>Desserts</h2>
   @for (product of products(); track product.name + product.title +
   product.price + product.counter){
@@ -60,6 +60,6 @@
     <h3>${{ this.orderTotal() }}</h3>
   </div>
   <div class="btn">
-    <button (click)="deactivePopUp()">Start New Order</button>
+    <button (click)="scrollTop(); deactivePopUp()">Start New Order</button>
   </div>
 </div>

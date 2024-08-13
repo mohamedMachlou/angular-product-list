@@ -1,6 +1,14 @@
 import { Product } from '../../models/product';
 import { ProductsDataService } from './../../services/products-data.service';
-import { Component, inject, OnInit, signal } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  inject,
+  OnInit,
+  signal,
+  ViewChild,
+  viewChild,
+} from '@angular/core';
 
 @Component({
   selector: 'show-product',
@@ -83,5 +91,15 @@ export class ShowProductComponent implements OnInit {
     this.productsDataService.currenttotalPrice.subscribe((totalPrices) => {
       this.orderTotal.set(totalPrices?.toFixed(2));
     });
+  }
+
+  //////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////
+  @ViewChild('scroll') scroll!: ElementRef;
+
+  scrollTop() {
+    window.scrollY = 0;
+    console.log('salam scroll');
   }
 }
