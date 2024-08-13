@@ -18,7 +18,7 @@ export class ProductsDataService {
       counter: 0,
       totalPrice: 0,
       selected: false,
-      img: './assets/images/image-waffle-desktop.webp',
+      img: './assets/images/image-waffle-desktop.jpg',
     },
     {
       name: 'Créme Brulée',
@@ -27,7 +27,7 @@ export class ProductsDataService {
       counter: 0,
       totalPrice: 0,
       selected: false,
-      img: './assets/images/image-creme-brulee-desktop.webp',
+      img: './assets/images/image-creme-brulee-desktop.jpg',
     },
     {
       name: 'Macaron',
@@ -36,7 +36,7 @@ export class ProductsDataService {
       counter: 0,
       totalPrice: 0,
       selected: false,
-      img: './assets/images/image-macaron-desktop.webp',
+      img: './assets/images/image-macaron-desktop.jpg',
     },
     {
       name: 'Tiramisu',
@@ -45,7 +45,7 @@ export class ProductsDataService {
       counter: 0,
       totalPrice: 0,
       selected: false,
-      img: './assets/images/image-tiramisu-desktop.webp',
+      img: './assets/images/image-tiramisu-desktop.jpg',
     },
     {
       name: 'Baklava',
@@ -54,7 +54,7 @@ export class ProductsDataService {
       counter: 0,
       totalPrice: 0,
       selected: false,
-      img: './assets/images/image-baklava-desktop.webp',
+      img: './assets/images/image-baklava-desktop.jpg',
     },
     {
       name: 'Pie',
@@ -63,7 +63,7 @@ export class ProductsDataService {
       counter: 0,
       totalPrice: 0,
       selected: false,
-      img: './assets/images/image-meringue-desktop.webp',
+      img: './assets/images/image-meringue-desktop.jpg',
     },
     {
       name: 'Cake',
@@ -72,7 +72,7 @@ export class ProductsDataService {
       counter: 0,
       totalPrice: 0,
       selected: false,
-      img: './assets/images/image-cake-desktop.webp',
+      img: './assets/images/image-cake-desktop.jpg',
     },
     {
       name: 'Brownie',
@@ -81,7 +81,7 @@ export class ProductsDataService {
       counter: 0,
       totalPrice: 0,
       selected: false,
-      img: './assets/images/image-brownie-desktop.webp',
+      img: './assets/images/image-brownie-desktop.jpg',
     },
     {
       name: 'Panna Cotta',
@@ -90,7 +90,7 @@ export class ProductsDataService {
       counter: 0,
       totalPrice: 0,
       selected: false,
-      img: './assets/images/image-panna-cotta-desktop.webp',
+      img: './assets/images/image-panna-cotta-desktop.jpg',
     },
   ]);
 
